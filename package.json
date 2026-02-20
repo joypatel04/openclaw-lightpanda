@@ -1,0 +1,42 @@
+{
+  "name": "openclaw-lightpanda-mcp",
+  "version": "1.0.1",
+  "description": "OpenClaw-ready MCP server for Lightpanda headless browser automation (stdio, hybrid URL-first).",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "openclaw-lightpanda-mcp": "src/index.js"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "INSTALL.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "npm run test:basic && npm run test:navigate && npm run test:evaluate && npm run test:form",
+    "test:basic": "node test/test-basic.js",
+    "test:navigate": "node test/test-navigate.js",
+    "test:evaluate": "node test/test-evaluate.js",
+    "test:form": "node test/test-form.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "openclaw",
+    "lightpanda",
+    "browser-automation",
+    "headless"
+  ],
+  "author": "Joy Patel",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "puppeteer-core": "^24.10.2",
+    "zod": "^3.23.8"
+  }
+}
